@@ -1,7 +1,6 @@
 # Slides: [Presentation](https://hackmd.io/@3h2qEDKEQXSZK4l2wloSMg/CSS)  
 # CSS Research 
 ## Responsive vs mobile-first design
-resources : http://bradfrost.github.io/this-is-responsive/resources.html
 
 ---
 
@@ -172,6 +171,8 @@ A flag on a block or element. Use them to change appearance or behavior.
  ## THANK YOU!  
  
 ### References:  
+
+[Responsive resource](http://bradfrost.github.io/this-is-responsive/resources.html)  
 [What is BEM?](http://getbem.com/introduction/)  
 [Why you should use BEM?](https://www.smashingmagazine.com/2018/06/bem-for-beginners/#the-main-reasons-why-we-do-not-use-any-selectors-except-classes)
 
