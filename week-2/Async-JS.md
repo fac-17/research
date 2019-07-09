@@ -1,10 +1,65 @@
 
 # Asynchronous JavaScript - [Slides](https://hackmd.io/@SjkyAeAyRjSqv_tPCU-41A/rJ5UIzMWr)
 
-**Team: Tony, Reuben, Gigi, and Francie :smile:**
+**Team: Gigi, Tony, Franchie and Reuben :smile:**
 
 ---
 
+## What are first class functions, and higher order functions?
+JavaScript treats functions as first-class citizens. That’s because in JavaScript or any other functional programming languages functions are objects.
+
+---
+
+
+### **First class functions** 
+These can be treated just like any other object (or data type), which means they can passed or returned as arguments. For example, you can have an array of functions:
+
+---
+
+
+```javascript
+const sum = (x, y) => x + y;
+const subtract = (x, y) => x - y;
+const multiply = (x, y) => x * y;
+
+const operations = [sum, subtract, multiply];
+```
+In the browser
+```javascript
+>operations
+<(3)[ƒ, ƒ, ƒ]
+0: (x, y) => x + y
+1: (x, y) => x - y
+2: (x, y) => x * y
+```
+
+---
+
+
+### **Higher order functions** 
+A Higher-Order function is a function that receives a function as an argument or returns the function as output. Kind of like nesting one function in another one. For example:
+- map()
+- filter()
+- reduce()
+
+---
+
+
+For example:
+```javascript
+const arr1 = [1, 2, 3];
+const arr2 = arr1.map(item => item * 2);
+console.log(arr2);
+```
+Returns a new array after each integer has been multiplied by two.
+```javascript
+(3)[2, 4, 6]
+0: 2
+1: 4
+2: 6
+
+```
+---
 
 ## What is a callback function? Give an example of a callback function and explain what happens when it is executed
 
@@ -98,86 +153,11 @@ Only when do we have a response from Twitter will our callback be invoked.
 
 ---
 
-
-## What are first class functions, and higher order functions?
-JavaScript treats functions as first-class citizens. That’s because in JavaScript or any other functional programming languages functions are objects.
-
----
-
-
-### **First class functions** 
-These can be treated just like any other object (or data type), which means they can passed or returned as arguments. For example, you can have an array of functions:
-
----
-
-
-```javascript
-const sum = (x, y) => x + y;
-const subtract = (x, y) => x - y;
-const multiply = (x, y) => x * y;
-
-const operations = [sum, subtract, multiply];
-```
-In the browser
-```javascript
->operations
-<(3)[ƒ, ƒ, ƒ]
-0: (x, y) => x + y
-1: (x, y) => x - y
-2: (x, y) => x * y
-```
-
----
-
-
-### **Higher order functions** 
-A Higher-Order function is a function that receives a function as an argument or returns the function as output. Kind of like nesting one function in another one. For example:
-- map()
-- filter()
-- reduce()
-
----
-
-
-For example:
-```javascript
-const arr1 = [1, 2, 3];
-const arr2 = arr1.map(item => item * 2);
-console.log(arr2);
-```
-Returns a new array after each integer has been multiplied by two.
-```javascript
-(3)[2, 4, 6]
-0: 2
-1: 4
-2: 6
-
-```
-
----
-
 ## What is the call stack?
 
 * A call stack is a **data structure**  which records the function calls, basically where in the program we are
 
 * If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.
-
----
-
-
-### You all must have seen the long red error stack trace sometimes in our browser console, that basically indicates the current state of the call stack and where in the function it failed in a top to bottom manner just like stack
-
-https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec
-
----
-
-
-
-![](https://i.imgur.com/ZVRwcrw.png)
-
-
----
-
 
 * that uses the **Last In, First Out (LIFO)** principle to temporarily store and manage function invocation (call).
 
@@ -209,23 +189,7 @@ The call stack is primarily used for function invocation (call). Since the call 
 
 ---
 
-
-
-In Asynchronous JavaScript
-
-* a callback function,
-* an event loop, 
-* a task queue. 
-
----
-
-
-The callback function is acted upon by the call stack during execution after the call back function has been pushed to the stack by the event loop.
-
-
----
-
-## What are async functions and blocking code?
+## Asynchronous vs Synchronous programming
 
 ### Synchronous programming:
 - things happen one at a time. 
@@ -243,6 +207,17 @@ The callback function is acted upon by the call stack during execution after the
 
 ---
 
+### Why asynchronous programming:
+-synchronous code has the potential to block further execution until it has finished what it’s doing. 
+-In English, long-running JavaScript functions can make the UI or server unresponsive until the function has returned. Obviously this can result in a terrible user-experience.
+
+---
+
+**JAVASCRIPT IS SYNCHRONOUS BY NATURE, BUT WE HAVE VARIOUS METHODS TO MAKE IT PERFORM TASKS ASYNCHRONOUSLY**
+-these include callbacks, promises, async functions.
+
+---
+
 #### References:
 [Event loop](https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec)
 [First class and higher order functions](https://hackernoon.com/effective-functional-javascript-first-class-and-higher-order-functions-713fde8df50a)
@@ -253,5 +228,4 @@ The callback function is acted upon by the call stack during execution after the
 
 That's it!
 ![elf](https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif)
-
 
