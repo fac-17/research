@@ -1,5 +1,5 @@
-[Slides](https://hackmd.io/@SjkyAeAyRjSqv_tPCU-41A/rJ5UIzMWr)
-# Asynchronous JavaScript
+
+# Asynchronous JavaScript - [Slides](https://hackmd.io/@SjkyAeAyRjSqv_tPCU-41A/rJ5UIzMWr)
 
 **Team: Tony, Reuben, Gigi, and Francie :smile:**
 
