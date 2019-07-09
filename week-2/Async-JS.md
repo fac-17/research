@@ -243,11 +243,15 @@ The callback function is acted upon by the call stack during execution after the
 
 ---
 
-References:
+#### References:
 [Event loop](https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec)
 [First class and higher order functions](https://hackernoon.com/effective-functional-javascript-first-class-and-higher-order-functions-713fde8df50a)
 [Higher order Functions](https://blog.bitsrc.io/understanding-higher-order-functions-in-javascript-75461803bad)
 [Callbacks](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
 
+---
+
 That's it!
 ![elf](https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif)
+
+
