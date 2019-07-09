@@ -1,5 +1,5 @@
+# Asynchronous JavaScript - [Slides](https://hackmd.io/@SjkyAeAyRjSqv_tPCU-41A/rJ5UIzMWr#/)
 
-# Asynchronous JavaScript - [Slides](https://hackmd.io/@SjkyAeAyRjSqv_tPCU-41A/rJ5UIzMWr)
 **Team: Gigi, Tony, Franchie and Reuben :smile:**
 
 ---
@@ -156,28 +156,17 @@ Only when do we have a response from Twitter will our callback be invoked.
 
 ## What is the call stack?
 
-* A call stack is a **data structure**  which records the function calls, basically where in the program we are
-
-* If we call a function to execute , we push something on to the stack, and when we return from a function, we pop off the top of the stack.
-
-* that uses the **Last In, First Out (LIFO)** principle to temporarily store and manage function invocation (call).
+* A call stack is a **data structure** that uses the **Last In, First Out (LIFO)** principle to temporarily store and manage function invocation (call).
 
 ---
 
-
-1. **data structure**  is a collection of 
-* data values, 
-* the relationships among them, 
-* and the functions or operations that can be applied to the data principle;
+1. **data structure**  is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data principles;
 
 ---
 
-
-2. **LIFO** Last in, First Out: it means that the last function that gets pushed into the stack is the first to be pop out, when the function returns.
+2. **LIFO** : When we say that the call stack, operates by the data structure principle of Last In, First Out, it means that the last function that gets pushed into the stack is the first to be pop out, when the function returns.
 
 ---
-
-
 
 ### Why is useful to understand what a call stack is:
 An understanding of the call stack will give clarity to how “function hierarchy and execution order” works in the JavaScript engine.
@@ -187,6 +176,10 @@ An understanding of the call stack will give clarity to how “function hierarch
 
 ### What it is used for?
 The call stack is primarily used for function invocation (call). Since the call stack is single, function(s) execution, is done, one at a time, from top to bottom. It means the call stack is synchronous.
+
+---
+
+![img](https://miro.medium.com/max/1050/1*E3zTWtEOiDWw7d0n7Vp-mA.gif)
 
 ---
 
@@ -229,6 +222,6 @@ The call stack is primarily used for function invocation (call). Since the call 
 
 ---
 
-That's it!  
-
+That's it! 
 ![elf](https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif)
+
