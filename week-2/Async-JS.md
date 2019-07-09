@@ -1,6 +1,5 @@
 
 # Asynchronous JavaScript - [Slides](https://hackmd.io/@SjkyAeAyRjSqv_tPCU-41A/rJ5UIzMWr)
-
 **Team: Gigi, Tony, Franchie and Reuben :smile:**
 
 ---
@@ -51,6 +50,7 @@ const arr1 = [1, 2, 3];
 const arr2 = arr1.map(item => item * 2);
 console.log(arr2);
 ```
+
 Returns a new array after each integer has been multiplied by two.
 ```javascript
 (3)[2, 4, 6]
@@ -59,6 +59,7 @@ Returns a new array after each integer has been multiplied by two.
 2: 6
 
 ```
+
 ---
 
 ## What is a callback function? Give an example of a callback function and explain what happens when it is executed
@@ -191,6 +192,8 @@ The call stack is primarily used for function invocation (call). Since the call 
 
 ## Asynchronous vs Synchronous programming
 
+---
+
 ### Synchronous programming:
 - things happen one at a time. 
 - When you call a function that performs an action, it returns only when the action has finished. 
@@ -200,16 +203,16 @@ The call stack is primarily used for function invocation (call). Since the call 
 
 
 ### Asynchronous programming:
--allows multiple things to happen at the same time. 
--When you start an action, your program continues to run. 
--When the action finishes, the program is informed and gets access to the result (for example, the return value).
--other processes are allowed to start, and may even finish before the original task.
+- allows multiple things to happen at the same time. 
+- When you start an action, your program continues to run. 
+- When the action finishes, the program is informed and gets access to the result (for example, the return value).
+- other processes are allowed to start, and may even finish before the original task.
 
 ---
 
 ### Why asynchronous programming:
--synchronous code has the potential to block further execution until it has finished what it’s doing. 
--In English, long-running JavaScript functions can make the UI or server unresponsive until the function has returned. Obviously this can result in a terrible user-experience.
+- synchronous code has the potential to block further execution until it has finished what it’s doing. 
+- In English, long-running JavaScript functions can make the UI or server unresponsive until the function has returned. Obviously this can result in a terrible user-experience.
 
 ---
 
@@ -218,7 +221,7 @@ The call stack is primarily used for function invocation (call). Since the call 
 
 ---
 
-#### References:
+## References:
 [Event loop](https://medium.com/@gaurav.pandvia/understanding-javascript-function-executions-tasks-event-loop-call-stack-more-part-1-5683dea1f5ec)
 [First class and higher order functions](https://hackernoon.com/effective-functional-javascript-first-class-and-higher-order-functions-713fde8df50a)
 [Higher order Functions](https://blog.bitsrc.io/understanding-higher-order-functions-in-javascript-75461803bad)
@@ -226,6 +229,6 @@ The call stack is primarily used for function invocation (call). Since the call 
 
 ---
 
-That's it!
-![elf](https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif)
+That's it!  
 
+![elf](https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif)
