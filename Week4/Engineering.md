@@ -1,4 +1,4 @@
-# Engineering
+# Engineering - [slides](https://hackmd.io/@KWeqzxmQQx65Y5HnnOSivw/HyH-8qVMB)
 
 ## Modules
 Modular code is code which is separated into independent modules. The idea is that internal details of individual modules should be hidden behind a public interface, making each module easier to understand, test and refactor independently of others.
@@ -220,7 +220,7 @@ String form paths are interpreted as UTF-8 character sequences identifying the a
 
 ### Some cool ones: 
 
-![ ](https://media.giphy.com/media/3o7abHGYSCrtVws2Os/giphy.gif)
+![](https://media.giphy.com/media/3o7abHGYSCrtVws2Os/giphy.gif)
 
 The path.basename() methods returns the last portion of a path.
 
