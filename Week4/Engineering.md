@@ -17,14 +17,16 @@ Node.js has several modules compiled into the binary.
 ---
 
 The core modules are defined within Node.js's source and are located in the lib/ folder. Core modules are always preferentially loaded if their identifier is passed to require(). For instance, require('http') will always return the built in HTTP module, even if there is a file by that name. 
-```javascript=
+
+```javascript
 const module = require('module_name');
 ```
 
 ---
 
 In the Node.js module system, each file is treated as a separate module. For example, consider a file named foo.js:
-```javascript=
+
+```javascript
 const circle = require('./circle.js');
 console.log(`The area of a circle of radius 4 is ${circle.area(4)}`);
 ```
@@ -33,7 +35,8 @@ On the first line, foo.js loads the module circle.js that is in the same directo
 ---
 
 Here are the contents of circle.js:
-```javascript=
+
+```javascript
 const { PI } = Math;
 
 exports.area = (r) => PI * r ** 2;
@@ -99,6 +102,16 @@ fs.readFile('/foo.txt', function(err, data) {
 ### Why should you avoid using throw in callbacks?
 
 Asynchronous exception is uncatchable because the intended catch block is not present when the asynchronous code is executed. Instead, the exception will propagate all the way and terminate the program.
+
+```
+UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1):
+TypeError: name must be a string
+DeprecationWarning: Unhandled promise rejections are deprecated. 
+In the future, promise rejections that are not handled will terminate
+the Node.js process with a non-zero exit code.
+```
+
+Async functions and async methods do not throw errors in a strict sense. Async functions and async methods always return a Promise, either resolved or rejected. You must attach then() and catch(), no matter what. (Or wrap the method inside try/catch). A rejected Promise will propagate up in the stack unless you catch it.
 
 
 https://bytearcher.com/articles/why-asynchronous-exceptions-are-uncatchable/
@@ -350,3 +363,5 @@ using the built in stringify() method is much easier in this case.
 [About Path Module](https://nodejs.org/api/path.html)
 
 [URL Encoding](https://www.urlencoder.io/learn/)
+
+[How to Throw Errors From Async Functions in Javascript? ](https://www.valentinog.com/blog/throw-async/)
