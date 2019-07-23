@@ -220,7 +220,7 @@ String form paths are interpreted as UTF-8 character sequences identifying the a
 
 ### Some cool ones: 
 
-![]((https://media.giphy.com/media/3o7abHGYSCrtVws2Os/giphy.gif)
+![ ](https://media.giphy.com/media/3o7abHGYSCrtVws2Os/giphy.gif)
 
 The path.basename() methods returns the last portion of a path.
 
