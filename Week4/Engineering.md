@@ -60,7 +60,7 @@ is a special object which is included in every JS file in the Node.js applicatio
 It's our natural desire to be able to think of computer instructions as a step-by-step series of operations. But, on-CPU operations are much cheaper than Input/Output (I/O) operations.
 
 https://nodesource.com/blog/why-asynchronous/
-![](https://i.imgur.com/weYyHkG.png)
+![(https://i.imgur.com/weYyHkG.png)
 
 In Node.js, I/O is treated differently under the hood and is exposed to the programmer. When working with Node.js, the programmer is rightly forced to see I/O as a separate class of operation. This is what makes Node.js fast - because programmers are forced to write fast programs by not introducing blocking I/O to the program flow
 
@@ -220,7 +220,7 @@ String form paths are interpreted as UTF-8 character sequences identifying the a
 
 ### Some cool ones: 
 
-![]
+![]((https://media.giphy.com/media/3o7abHGYSCrtVws2Os/giphy.gif)
 
 The path.basename() methods returns the last portion of a path.
 
