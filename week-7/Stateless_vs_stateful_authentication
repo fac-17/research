@@ -1,0 +1,148 @@
+# Stateless vs stateful authentication
+
+---
+
+## What is it?
+
+![](https://media.giphy.com/media/LKf4i5Tvt7mE0/giphy.gif)
+
+---
+
+#### Session-based Authentication 
+In Session-based Authentication the Server does all the heavy lifting server-side
+
+---
+
+#### Token-based Authentication
+In Token-based Authentication no session is persisted server-side (stateless). The heavy lifting happens on Client side.
+
+---
+
+
+#### States 
+> a “state” is simply the condition or quality of an entity at an instant in time, and to be **stateful** is to rely on these moments in time and to change the output given the determined inputs and state.
+
+
+
+
+---
+
+
+
+### Stateful (session ID)
+- You log into a resource, and in doing so, you pass your password and username. If the web server stores this data in the backend (session ID) and uses it to identify you, the service is stateful. 
+   
+    
+
+---
+
+
+### Stateless 
+- The opposite of this ☝️
+![state](https://media.giphy.com/media/H3oWbYbyhxedq/giphy.gif)
+
+---
+
+
+
+### Session based authentification 
+
+- **Stateful** sessions are created on the backend. 
+- A corresponding session reference ID (**session_ID**) is sent to the client
+- Each time the client makes a request to the server, the **server locates the session memory using the ID and finds the authentication information.**
+- If the session memory is deleted from the the server, the clients ID is meaningless.
+
+---
+
+![](https://i.imgur.com/nWZJcov.png)
+
+---
+
+### Token based authentification
+- **Stateless** authentication **stores** the user session data **on the browser**. The data is **signed** to ensure the integrity and authority of the session data.
+- Since the **user session** is stored on the **client side**, the **server only** has the capability to **verify** its validity by checking whether the payload and the signature match. *(Like we did this morning)*
+
+---
+
+![](https://i.imgur.com/oAdQF2S.png)
+
+---
+
+## Advantages & Disadvantages
+
+---
+
+
+
+### Advantages stateful/session ID
+-  **Revoke** the session anytime
+- Easy to implement and manage for **one-session-sever scenario**
+- Session data **can be changed later** (assume that for a one-session-sever, no inconsistent problem)
+
+![](https://media.giphy.com/media/12OIWdzFhisgww/giphy.gif)
+
+---
+
+### Disadvantages 
+- Increasing server overhead: As the number of **logged-in users increases**, the more **server** resources are **occupied**.
+
+
+---
+
+- **Fail to scale:** If the sessions are distributed in **different servers**, we need to implement a tracking algorithm to **link a specific user session** and the specific session sever. 
+That means, once Bob’s session is handled by X server, then all Bob’s following requests must be handled by X server. 
+
+
+---
+
+- **Difficult for 3rd party applications** to use your credentials. When a 3rd party application enables your users to login their website, the **3rd party application is not able to directly verify your users’ session** (they are stored on your backend). The verification must be redirected to the credential servers. Therefore, there is more work between 3rd party application and the backend.
+
+---
+
+
+
+### Advantages stateless/token
+- **Lower server overhead:** The session data is not stored on the server side.
+- **Easy to scale:** Since the session data is stored on the client side, it **does not matter which backend server the request is routed to**, as long as all backend servers share the **same private key**, then all servers have the **same capability to verify** the validity of the session.
+
+
+---
+
+- **Good to integrate with 3rd party application:** In the single sign-on protocols, the 3rd party applications and the **IdP must be able to communicate** with each other via user agents (browser).
+
+
+---
+
+![](https://media.giphy.com/media/5hig3BUEhPZFC/giphy.gif)
+
+---
+
+
+### Disadvantages 
+- Cannot revoke the session anytime: Since the user session is stored at client side, **the server does not have any rights to delete the session**.
+- Relatively complex to implement for one-session-server scenario: The advantages of stateless authentication is scalability. However, it increases the technical complexity and it is not extremely useful when we only have one-session-server.
+
+---
+
+- **Session data cannot be changed until its expiration time**: Suppose we want to add “Age” property to the session data above, we can ask the client to update it, but we cannot make sure the client does update it, since its previously session data is not expired yet, then the client still has the chance to make requests with old session data.
+
+
+---
+
+## THE END .. questions?
+![](https://media.giphy.com/media/7zusy37fwKjfy/giphy.gif)
+
+---
+
+
+
+
+
+## RESOURCES
+[Session Authentication vs Token Authentication](https://security.stackexchange.com/questions/81756/session-authentication-vs-token-authentication)
+
+https://dev.to/thecodearcher/what-really-is-the-difference-between-session-and-token-based-authentication-2o39
+
+Identity provider
+> "When you log in to a new retail website by clicking “Sign in with Google” or “Sign in with Facebook,” that’s an example of Google or Facebook acting as a trusted identity provider (IdP), and authenticating you on behalf of that online store."
+> 
