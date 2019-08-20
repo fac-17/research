@@ -1,6 +1,6 @@
 # Templating and Serverside rendering
 
-Full doc: https://hackmd.io/VKbsWE4wRCCNLCaxoeY9Bg?both
+## Full doc: https://hackmd.io/VKbsWE4wRCCNLCaxoeY9Bg?both
 
 #### What is server-side rendering?
 
